@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Kingdom's Railway Network</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- Main Menu -->
+    
+    <div id="menu-screen" class="screen active">
+        <style>
+            .chosen {
+                background-color: #333;
+                color: #fff;
+            }
+        </style>
+        <h1>RAILWAYS</h1>
+    
+        <input type="text" id="player-name" placeholder="Who are you?">
+    
+        <div class="difficulty-buttons">
+            <button id="easy-btn">5x5 (Easy)</button>
+            <button id="hard-btn">7x7 (Hard)</button>
+        </div>
+    
+        <div class="rules-start-buttons">
+            <button id="rules-btn">Rules</button>
+            <button id="start-game-btn" disabled>Start Game</button>
+        </div>
+    </div>
+    
+    
+    <!-- Game Page -->
+    <div id="game-screen" class="screen" style="display: none;">
+        <div id="left-panel">
+            <div id="game-info">
+                <h1>Complete the route!</h1>
+                <div id="player-info">
+                    <p> <span id="player-name-display"></span></p>
+                    <p>ELAPSED TIME : <span id="timer">00:00</span></p>
+                </div>
+            </div>
+            <div class="game-sidebar">
+                <button id="back-to-menu">Back to Menu</button>
+            </div>
+        </div>
+        
+        <div id="end-game-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <h2>YOU WON!</h2>
+                <p>Congratulations, you've won the game!</p>
+                <button id="close-modal-btn">Close</button>
+            </div>
+        </div>
+         
+        <div id="game-grid">
+            <!-- Game grid structure-->
+        </div>
+    </div>
+    
+    <!-- Rules Modal (pop-up window) -->
+    <div id="rules-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Game Rules</h2>
+            <div id="game-instructions">
+                <p><strong>Goal of the Game:</strong> Create a continuous circular railway line that reaches every place where the train can travel.</p>
+            
+                <p>
+                    Terrain, bridges, and mountains must be navigated. The railway line cannot:
+                    <ul>
+                        <li>Cross itself</li>
+                        <li>Pass through a lake</li>
+                        <li>Pass through a cell more than once</li>
+                    </ul>
+                </p>
+            
+                <p><strong>Controls:</strong></p>
+                <ul>
+                    <li><strong>Left-click</strong>: Place a rail and change rail type</li>
+                    <li><strong>Right-click</strong>: Rotate rail</li>
+                </ul>
+            </div>
+            
+            
+        </div>
+    </div>
+
+    <script src="js/main.js" ></script>
+</body>
+</html>
