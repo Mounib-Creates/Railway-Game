@@ -27,8 +27,5 @@ A grid-based puzzle game where you design a continuous circular railway while na
 - **CSS**: Styling for an engaging visual experience.  
 - **JavaScript**: Core logic for gameplay and animations.  
 
-## Installation  
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/your-username/railways-puzzle-game.git
+
 
